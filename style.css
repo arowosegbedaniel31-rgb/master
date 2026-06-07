@@ -1,0 +1,319 @@
+:root {
+    --primary: #06B6D4;
+    --secondary: #0F172A;
+    --accent: #F59E0B;
+    --light: #F8FAFC;
+    --dark: #020617;
+    --text: #475569;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 100px 0;
+}
+
+/*  NAVBAR (glass effect) */
+.navbar {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+    transform: translateY(-1px);
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.92), rgba(15, 23, 42, 0.96)),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #fff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 35px;
+    transition: transform 0.3s;
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/*  BUTTONS  */
+.btn-primary-custom {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-primary-custom:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+}
+
+/*  CARDS & UI  */
+.section-title {
+    color: var(--secondary);
+    font-weight: 800;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+}
+
+.feature-card,
+.service-card,
+.course-card {
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.4s ease;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--primary);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.feature-card:hover .icon-box {
+    background: var(--primary);
+    color: white;
+}
+
+/* TRAINING SECTION (dark) */
+.training {
+    background: linear-gradient(135deg, var(--secondary), #1e293b);
+    color: white;
+}
+
+.training .section-title {
+    color: white;
+}
+
+.training .section-title:after {
+    background: var(--accent);
+}
+
+.training .course-card {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.training .course-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.training .course-card h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.training .course-card:hover {
+    background: rgba(6, 182, 212, 0.15);
+    border-color: var(--primary);
+}
+
+/* GALLERY IMAGES */
+.gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.4s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* STATS SECTION  */
+.stats {
+    background: linear-gradient(135deg, var(--primary), #0891b2);
+    color: white;
+}
+
+.stat-box {
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* TESTIMONIALS */
+.testimonial {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    height: 100%;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    opacity: 0.3;
+}
+
+/*  CTA SECTION */
+.cta {
+    background: linear-gradient(135deg, var(--secondary), var(--dark));
+    color: white;
+}
+
+/*  FOOTER  */
+footer {
+    background: var(--dark);
+    color: #cbd5e1;
+}
+
+footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: var(--primary);
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+/*  RESPONSIVE */
+@media (min-width: 390px) and (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .stat-box h2 {
+        font-size: 2rem;
+    }
+    
+    .gallery img {
+        height: 220px;
+    }
+}    
